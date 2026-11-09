@@ -1,0 +1,15 @@
+services:
+  kali:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: kali-wifi-lab:local
+    container_name: kali-wifi-lab
+    stdin_open: true
+    tty: true
+    init: true
+    volumes:
+      - ./workspace:/workspace
+    working_dir: /workspace
+    command: ["sleep", "infinity"]
+    restart: "no"

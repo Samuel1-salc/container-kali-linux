@@ -1,0 +1,9 @@
+# Execute SOMENTE no Linux hospedeiro e em uma rede autorizada.
+# Compartilha a rede do host: alterações na interface Wi-Fi podem
+# interromper a conexão do computador.
+services:
+  kali:
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
